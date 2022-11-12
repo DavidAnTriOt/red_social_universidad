@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--CUADRO DE DIALOGO PERSONALIZADO-->
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="320dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:layout_gravity="center"
+    android:background="#ffffff">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!--TEXTO DE CUADRO DE DIALOGO-->
+        <TextView
+            android:text="@string/ErrorSesion"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!--ANIMACIÓN LOTTIE-->
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            app:lottie_imageAssetsFolder="assets"
+            app:lottie_fileName="error_sesion.json"
+            app:lottie_autoPlay="true"/>
+
+        <!--BOTON PARA CERRAR CUADRO DE DIALOGO-->
+        <Button
+            android:id="@+id/Ok_ErrorSesion"
+            android:text="@string/Ok_ErrorSesion"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

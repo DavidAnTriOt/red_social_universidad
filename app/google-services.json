@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "276851373927",
+    "project_id": "universidad-x-rs",
+    "storage_bucket": "universidad-x-rs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276851373927:android:094c52e24a555db6bee1c2",
+        "android_client_info": {
+          "package_name": "com.example.redsocialuniversidadx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276851373927-nmihs8j5otb249o681cqlpd923t0cn8p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjcJ49pY_86IRzGOJBkCR3tsIwKHaJ-Yo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276851373927-nmihs8j5otb249o681cqlpd923t0cn8p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
