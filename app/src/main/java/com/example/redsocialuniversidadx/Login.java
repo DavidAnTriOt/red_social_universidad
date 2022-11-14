@@ -28,8 +28,8 @@ public class Login extends AppCompatActivity {
     Button Ingresar;
 
     private FirebaseAuth firebaseAuth;
-    private ProgressBar progressBar;
-    Dialog dialog;
+    //private ProgressBar progressBar;
+    //Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,8 +47,8 @@ public class Login extends AppCompatActivity {
         Ingresar = findViewById(R.id.Ingresar);
 
         firebaseAuth = FirebaseAuth.getInstance();
-        progressBar = new ProgressBar(Login.this); //Inicialización del ProgressBar
-        dialog = new Dialog(Login.this);  //Inicialización del cuadro de dialogo
+        //progressBar = new Toast.makeText(Login.this); //Inicialización del ProgressBar
+        //dialog = new Dialog(Login.this);  //Inicialización del cuadro de dialogo
 
         //Asignacion de evento al boton INGRESAR
         Ingresar.setOnClickListener(new View.OnClickListener() {
@@ -75,42 +75,43 @@ public class Login extends AppCompatActivity {
 
     //Metodo para validar usuario
     private void LOGINUSUARIO(String correo, String contra) {
-        progressBar.setVisibility(View.VISIBLE);
-        progressBar.showContextMenu();
+        //progressBar.setVisibility(View.VISIBLE);
+        //progressBar.showContextMenu();
         firebaseAuth.signInWithEmailAndPassword(correo, contra)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         //Si se inicia sesion correctamente
                         if (task.isSuccessful()){
-                            progressBar.setVisibility(View.GONE); //el progreso se cierra, oculta
+                            //progressBar.setVisibility(View.GONE); //el progreso se cierra, oculta
+                            //Toast.makeText(this, "A iniciado sesión correctamente", Toast.LENGTH_SHORT).show();
                             FirebaseUser user = firebaseAuth.getCurrentUser();
 
                             //al iniciar sesion nos mandara a la actividad Inicio
                             startActivity(new Intent(Login.this, Inicio.class));
                             assert user != null; //para que el usuario no sea nulo
-                            Toast.makeText(Login.this, "Bienvenido(a)"+user.getEmail(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Login.this, "Bienvenido(a) "+user.getEmail(), Toast.LENGTH_SHORT).show();
                             finish();
 
                         }else {
-                            progressBar.setVisibility(View.VISIBLE);
+                            //progressBar.setVisibility(View.VISIBLE);
                             Toast.makeText(Login.this,"A ingresado sus datos incorrectamente", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        progressBar.setVisibility(View.VISIBLE);
+                        //progressBar.setVisibility(View.VISIBLE);
                         //REEMPLAZO DE MENSAJE DE ERROR
-                        Dialog_error_sesion();
+                        //Dialog_error_sesion();
                         //para que muestre el mensaje
-                        //Toast.makeText(Login.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
     }
 
     //Creacion del Dialogo personalizado
-    private void Dialog_error_sesion(){
+    /*private void Dialog_error_sesion(){
         Button Ok_ErrorSesion;
         dialog.setContentView(R.layout.error_sesion); //Conexion con la vista creada
         Ok_ErrorSesion = dialog.findViewById(R.id.Ok_ErrorSesion);
@@ -126,7 +127,7 @@ public class Login extends AppCompatActivity {
         dialog.setCancelable(false); //Para que no se cierre si no presionan un area que no sea el boton D:
         dialog.show();
 
-    }
+    }*/
 
     //Habilitación de boton para retroceder(actividad anterior)
     @Override

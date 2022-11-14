@@ -17,9 +17,11 @@ public class PantallaDeCarga extends AppCompatActivity {
 
         new Handler().postDelayed(() -> {
             //Accion a ejecutarse luego de la PantallaDeCarga
-            Intent intent = new Intent(PantallaDeCarga.this, MainActivity.class);
+            //Reemplazo del MainActivity por la actividad Inicio
+            Intent intent = new Intent(PantallaDeCarga.this, Inicio.class);
             startActivity(intent);
-            //MainActivity
+            finish();
+            //MainActivity ya no aparecerá al abrir la app despues de loguearse
         },Duracion);
     }
 }

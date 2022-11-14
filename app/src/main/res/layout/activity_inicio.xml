@@ -15,35 +15,36 @@
         <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:scaleType="center"
+        android:scaleType="centerCrop"
         android:src="@drawable/portada"/>
 
 
         <!--DATOS REUTILIZADOS-->
+
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
             android:orientation="vertical"
-            android:padding="10dp"
-            android:layout_marginTop="80dp">
+            android:padding="10dp">
 
             <!--FOTO DE PERFIL-->
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/usuario"
-                android:layout_marginTop="50dp"
-                android:layout_marginStart="20dp"
+                android:id="@+id/foto_usuario"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:scaleType="center"
-                android:background="#ffffff"
-                android:padding="3dp"/>
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:background="#fff"
+                android:padding="3dp"
+                android:scaleType="centerCrop" />
 
             <!--DATOS EXTRA-->
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
 
                 <!--uid-->
                 <androidx.appcompat.widget.LinearLayoutCompat
@@ -52,18 +53,18 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:text="@string/uidtxt"
-                        android:textColor="#000000"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="match_parent"
+                        android:text="@string/uidtxt"
+                        android:textColor="#000000" />
 
                     <TextView
                         android:id="@+id/uidPerfil"
-                        android:text="@string/correoPerfil"
-                        android:background="#000000"
-                        android:layout_marginStart="5dp"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/uidPerfil"
+                        android:textColor="#000000" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -74,16 +75,18 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:text="@string/nombrestxt"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="@string/nombrestxt"
+                        android:textColor="#000000" />
 
                     <TextView
                         android:id="@+id/nombresPerfil"
-                        android:text="@string/nombresPerfil"
-                        android:layout_marginStart="5dp"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/nombresPerfil"
+                        android:textColor="#000000" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -93,6 +96,20 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/apellidostxt"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/apellidosPerfil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/apellidosPerfil"
+                        android:textColor="#000000" />
+
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <!--edad-->
@@ -100,6 +117,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/edadtxt"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/edadPerfil"
+                        android:id="@+id/edadPerfil"
+                        android:textColor="#000000" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -109,6 +139,19 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/telefonotxt"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/telefonoPerfil"
+                        android:id="@+id/telefonoPerfil"
+                        android:textColor="#000000" />
+
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <!--carrera-->
@@ -116,6 +159,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/carreratxt"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/carreraPerfil"
+                        android:id="@+id/carreraPerfil"
+                        android:textColor="#000000" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -126,31 +182,163 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:text="@string/correotxt"
-                        android:textColor="#000000"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="@string/correotxt"
+                        android:textColor="#000000" />
 
                     <TextView
-                        android:text="@string/correoPerfil"
-                        android:background="#000000"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:id="@+id/correoPerfil"
+                        android:text="@string/correoPerfil"
+                        android:textColor="#000000" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
+            <!--MENU DE OPCIONES-->
+
+            <!--Opcion 1 y 2-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <!--Crear Publicacion-->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="80dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/publicacion" />
+
+                    <Button
+                        android:id="@+id/CrearPublicacionOpcion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/CrearPublicacionOpcion" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <!--FIN Crear Publicacion-->
+
+                <!--Amigos-->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="80dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/amigos" />
+
+                    <Button
+                        android:id="@+id/AmigosOpcion"
+                        android:text="@string/AmigosOpcion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <!--FIN Amigos-->
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <!--Opcion 3 y 4-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <!--Publicaciones-->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="80dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/publicaciones_amigos" />
+
+                    <Button
+                        android:id="@+id/PublicacionesOpcion"
+                        android:text="@string/PublicacionesOpcion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <!--FIN Publicaciones-->
+
+                <!--Chats-->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="80dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/chat_amigos" />
+
+                    <Button
+                        android:id="@+id/ChatsOpciones"
+                        android:text="@string/ChatsOpciones"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <!--FIN Chats-->
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
         </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <Button
+            android:id="@+id/MisDatosOpcion"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#65000000"
+            android:text="@string/MisDatosOpcion"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/CerrarSesion"
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#65FFFFFF"
+            android:textColor="#000000"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:text="@string/CerrarSesion" />
+
+
 
 
     </RelativeLayout>
 
-    <!--<Button
-        android:id="@+id/CerrarSesion"
-        android:text="Cerrar Sesion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>-->
+
 
 
 </androidx.core.widget.NestedScrollView>
