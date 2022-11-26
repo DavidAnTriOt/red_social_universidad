@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">UNIVERSIDAD X RS</string>
+
+    <string name="BTNlogin">Ingresa</string>
+    <string name="BTNregistrar">REGISTRATE</string>
+    <string name="CerrarSesion">CERRAR SESIÓN</string>
+    <string name="MisDatosOpcion">Mis Datos</string>
+
+    <string name="TXTregistro">Registro</string>
+    <string name="nombres">Nombres</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="edad">Edad</string>
+    <string name="telefono">Ingrese su teléfono</string>
+    <string name="carrera">Ingrese su carrera</string>
+    <string name="correo">Ingrese su correo</string>
+    <string name="contraseña">Ingrese su contraseña</string>
+    <string name="RegistrarUsuario">REGISTRAME</string>
+
+    <!--Login-->
+    <string name="CorreoLog">Correo Electrónico</string>
+    <string name="ContraLog">Contraseña</string>
+    <string name="Ingresar">INGRESA</string>
+
+    <!--DIALOG PARA INICIO DE SESION FALLIDO-->
+    <string name="ErrorSesion">(Error de correo o contraseña) No se pudo iniciar la sesión, vuelva a intentarlo</string>
+    <string name="Ok_ErrorSesion">OK :(</string>
+
+    <!--PERFIL-->
+    <string name="uidtxt">Uid: </string>
+    <string name="uidPerfil"> -- </string>
+    <string name="nombrestxt">Nombres: </string>
+    <string name="nombresPerfil"> -- </string>
+    <string name="apellidostxt">Apellidos: </string>
+    <string name="apellidosPerfil"> -- </string>
+    <string name="edadtxt">Edad: </string>
+    <string name="edadPerfil"> -- </string>
+    <string name="telefonotxt">Telefono: </string>
+    <string name="telefonoPerfil"> -- </string>
+    <string name="carreratxt">Carrera: </string>
+    <string name="carreraPerfil"> -- </string>
+    <string name="correotxt">Correo: </string>
+    <string name="correoPerfil"> -- </string>
+
+    <!--MENU-->
+    <string name="CrearPublicacionOpcion">Crear Publicación</string>
+    <string name="AmigosOpcion">Amigos</string>
+    <string name="PublicacionesOpcion">Publicaciones</string>
+    <string name="UsuarioOpciones">Amigos</string>
+    <string name="ChatsOpciones">Chats</string>
+
+
+</resources>
